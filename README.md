@@ -37,20 +37,20 @@ You will need to find the two individual Python files in the vSAN SDK zip file a
 
 Reserve a /28 Public IP Address block from the Equinix Metal Portal:
 
-Go to console.equinix.com
-IPs and Networks
-IPs
+* Go to console.equinix.com
+* IPs and Networks
+* IPs
 + Request IP addresses
-Public IPv4
-Location = select the datacenter you're deploying this to
-Quantity = /28 (16 IPs)
-Add a description for your new block.
+* Public IPv4
+* Location = select the datacenter you're deploying this to
+* Quantity = /28 (16 IPs)
+* Add a description for your new block.
 
 
 ## Modify your variables 
 There is a `terraform.tfvars` file that you can copy and use to update with your deployment variables. Open the file in a text editor to update the variables.
 
-Modify the variable: public_ips_cidr = ["123.123.123.0/28"]
+* Modify the variable: public_ips_cidr = ["123.123.123.0/28"]
 
 The following variable blocks must be validated to be accurate for your desired deployment:
 
@@ -72,20 +72,20 @@ The following variable blocks must be validated to be accurate for your desired 
 * esxi_host_count = 3               <--- Validate this is your desired host number - Recommended to deploy 3, if only 2 are needed, the 3rd can be deleted after successful completion.
 
 # VMWare specific variables
-vcenter_portgroup_name  = "VM Public Net 1"
-vcenter_datacenter_name = "Equinix Metal DC13"
-vcenter_cluster_name = "dc13-1"
-vcenter_domain = "vsphere.local"
-vcenter_user_name = "Administrator"
-domain_name = "equinix-metal.local"
-vpn_user = "vm_admin"
+* vcenter_portgroup_name  = "VM Public Net 1"
+* vcenter_datacenter_name = "Equinix Metal DC13"
+* vcenter_cluster_name = "dc13-1"
+* vcenter_domain = "vsphere.local"
+* vcenter_user_name = "Administrator"
+* domain_name = "equinix-metal.local"
+* vpn_user = "vm_admin"
 
 # Minio storage
-s3_url = "http://86.109.7.194:9000/"
-s3_bucket_name = "vmware"
-s3_access_key = "newminio"
-s3_secret_key = "newminio321"
-vcenter_iso_name = "VMware-VCSA-all-7.0.1-17004997.iso"*
+* s3_url = "http://86.109.7.194:9000/"
+* s3_bucket_name = "vmware"
+* s3_access_key = "newminio"
+* s3_secret_key = "newminio321"
+* vcenter_iso_name = "VMware-VCSA-all-7.0.1-17004997.iso"*
 
 
 The others set how many hosts you'd like, their size, etc. You'll notice some default values in the `terraform.tfvars` file.
