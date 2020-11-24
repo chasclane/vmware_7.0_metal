@@ -111,8 +111,8 @@ vCenter_Username = Administrator@vsphere.local
  
 ### IF THE SCRIPT FAILS:
 
-if the script fails BEFORE VCSA - a `terraform destroy --auto-approve` is needed to clean it up. 
-if the script fails AFTER VCSA - an additional `terraform apply -auto-approve` should suffice to continue the configuration and complete successfully
+* if the script fails DURING or BEFORE VCSA deploy - a `terraform destroy --auto-approve` is needed to clean it up. 
+* if the script fails AFTER VCSA deploy - an additional `terraform apply -auto-approve` should suffice to continue the configuration and complete successfully
 
 ## Cleaning the environement
 To clean up a created environment (or a failed one), run `terraform destroy --auto-approve`.
