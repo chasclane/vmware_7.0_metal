@@ -114,6 +114,18 @@ vCenter_Username = Administrator@vsphere.local
 if the script fails BEFORE VCSA - a `terraform destroy --auto-approve` is needed to clean it up. 
 if the script fails AFTER VCSA - an additional `terraform apply -auto-approve` should suffice to continue the configuration and complete successfully
 
+### Connect to the Environment
+
+There is an L2TP IPsec VPN setup. There is an L2TP IPsec VPN client for every platform. You'll need to reference your operating system's documentation on how to connect to an L2TP IPsec VPN.
+
+MAC how to configure L2TP IPsec VPN - https://support.apple.com/guide/mac-help/set-up-a-vpn-connection-on-mac-mchlp2963/mac
+
+Chromebook how to configure LT2P IPsec VPN - https://support.google.com/chromebook/answer/1282338?hl=en
+
+Make sure to enable all traffic to use the VPN (aka do not enable split tunneling) on your L2TP client.
+
+Some corporate networks block outbound L2TP traffic. If you are experiening issues connecting, you may try a guest network or personal hotspot.
+
 ## Cleaning the environement
 To clean up a created environment (or a failed one), run `terraform destroy --auto-approve`.
 
