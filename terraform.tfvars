@@ -1,8 +1,8 @@
-auth_token = "6jxrxmJqWQ461ZkhqkNxsXZUPVe2eKYz"
+auth_token = ""
 ssh_private_key_path = "~/.ssh/id_rsa"
-public_ips_cidr = ["86.109.7.160/28"]
-project_id = "73c74072-6c2d-49b9-a995-53eef8ff0dcb"
-organization_id = "ecd6e156-e2fb-4e5b-b90e-090a055437ee"
+public_ips_cidr = ["/28"]
+project_id = ""
+organization_id = ""
 
 # Device provisioning
 router_hostname = "edge-gateway"
@@ -25,10 +25,10 @@ domain_name = "equinix-metal.local"
 vpn_user = "vm_admin"
 
 # Minio storage
-s3_url = "http://86.109.7.194:9000/"
+s3_url = ""
 s3_bucket_name = "vmware"
-s3_access_key = "newminio"
-s3_secret_key = "newminio321"
+s3_access_key = ""
+s3_secret_key = ""
 vcenter_iso_name = "VMware-VCSA-all-7.0.1-17004997.iso"
 
 private_subnets = [
